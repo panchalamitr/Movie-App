@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="activity_horizontal_margin">@dimen/_10sdp</dimen>
+    <dimen name="activity_vertical_margin">@dimen/_10sdp</dimen>
+    <dimen name="card_padding_large">@dimen/_10sdp</dimen>
+    <dimen name="card_padding_medium">@dimen/_4sdp</dimen>
+    <dimen name="card_margin">@dimen/_4sdp</dimen>
+    <dimen name="app_bar_height">@dimen/_300sdp</dimen>
+    <dimen name="text_protection_scrim_height">@dimen/_88sdp</dimen>
+    <integer name="grid_column_count">2</integer>
+</resources>
