@@ -39,3 +39,11 @@ x
 Happ/src/main/java/com/panchalamitr/oxforddictionary/model/MovieDetail.kt,5\e\5e721c7bdbdacb588694b21965cf148bd6ef1f51
 r
 Bapp/src/main/java/com/panchalamitr/oxforddictionary/db/MovieDao.kt,1\f\1f71ae153809f9c81b247adae6b5f0ffef321638
+v
+Fapp/src/main/java/com/panchalamitr/oxforddictionary/ui/BaseActivity.kt,8\8\88141e8307fddd9ed2d8712f3108710923ce441c
+‰
+Yapp/src/androidTest/java/com/panchalamitr/oxforddictionary/MovieDetailInstrumentedTest.kt,2\f\2fa76f7c25f686b7e3e434058134c26f72f397db
+}
+Mapp/src/androidTest/java/com/panchalamitr/oxforddictionary/db/MovieDaoTest.kt,b\c\bc2f8b7a0dec1c663650cf02b28acfc5edbf704b
+‰
+Yapp/src/test/java/com/panchalamitr/oxforddictionary/repository/FakeMovieListRepository.kt,9\e\9ee571a3d44f7665693cb4234aa25587d2f917ea

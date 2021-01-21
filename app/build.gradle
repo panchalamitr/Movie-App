@@ -36,6 +36,8 @@ android {
     }
 
     packagingOptions {
+        exclude 'META-INF/AL2.0'
+        exclude 'META-INF/LGPL2.1'
         exclude 'META-INF/main.kotlin_module'
         exclude 'META-INF/library_release.kotlin_module'
         exclude 'META-INF/atomicfu.kotlin_module'
@@ -105,11 +107,18 @@ dependencies {
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation "androidx.room:room-ktx:2.2.6"
 
+
     /** Glide Image Loading Library **/
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
-    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:4.13.1'
+    testImplementation "com.google.truth:truth:1.1"
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.2'
+
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation "com.google.truth:truth:1.1"
+    androidTestImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.2'
+
 }
