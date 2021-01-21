@@ -8,6 +8,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.panchalamitr.oxforddictionary.model.Movie
 import com.panchalamitr.oxforddictionary.repository.MovieListRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 
 class MovieListViewModel @ViewModelInject constructor(
@@ -21,12 +23,13 @@ class MovieListViewModel @ViewModelInject constructor(
 
 
     fun getMovie() {
-        viewModelScope.launch {
+        viewModelScope.launch(IO) {
+
             showProgressLiveData.postValue(true)
             val movieResponse = movieListRepository.getMovie()
-            if(movieResponse.response == "False"){
-                errorMessageLiveData.postValue(movieResponse.error)
-            }else {
+            if (movieResponse.response == "False") {
+                errorMessageLiveData.postValue(movieResponse.error!!)
+            } else {
                 movieListLiveData.postValue(movieResponse)
             }
             showProgressLiveData.postValue(false)

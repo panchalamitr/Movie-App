@@ -20,7 +20,7 @@ import javax.inject.Inject
 
 
 @AndroidEntryPoint
-class MovieListActivity : AppCompatActivity(), ItemClickListener {
+class MovieListActivity : BaseActivity(), ItemClickListener {
 
 
     @Inject
@@ -45,11 +45,13 @@ class MovieListActivity : AppCompatActivity(), ItemClickListener {
                initRecyclerView(it)
         })
 
+        initProgressBar(activityMovieListBinding.pbLoading)
+
         movieListViewModel.observeProgress().observe(this, {
             if(it) {
-                activityMovieListBinding.progressSpinner.visibility = View.VISIBLE
+                showProgressBar()
             }else{
-                activityMovieListBinding.progressSpinner.visibility = View.GONE
+                hideProgressBar()
             }
         })
 

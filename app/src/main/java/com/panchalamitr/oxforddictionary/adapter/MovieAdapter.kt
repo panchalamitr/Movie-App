@@ -26,9 +26,9 @@ class MovieAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val movie = movieResult!!.search[position]
+        val movie = movieResult!!.search!![position]
         movie.apply {
-            holder.mTitleView.text = "$title (${movie.type.capitalize()})"
+            holder.mTitleView.text = "$title (${movie.type!!.capitalize()})"
             holder.mYearView.text = "Year: $year"
             val imageUrl = if (poster != "N/A") {
                 poster
@@ -48,7 +48,7 @@ class MovieAdapter(
     override fun getItemCount(): Int {
         val total = if (movieResult!!.search == null) {
             0
-        } else movieResult!!.search.size
+        } else movieResult!!.search!!.size
         Timber.d("Total $total")
         return total
     }

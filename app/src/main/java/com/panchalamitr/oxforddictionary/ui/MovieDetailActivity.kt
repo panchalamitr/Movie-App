@@ -1,11 +1,11 @@
 package com.panchalamitr.oxforddictionary.ui
 
+import android.R
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.panchalamitr.oxforddictionary.adapter.MovieAdapter
 import com.panchalamitr.oxforddictionary.databinding.ActivityMovieDetailBinding
 import com.panchalamitr.oxforddictionary.repository.MovieDetailRepository
 import com.panchalamitr.oxforddictionary.viewmodel.MovieDetailViewModel
@@ -14,7 +14,7 @@ import javax.inject.Inject
 
 
 @AndroidEntryPoint
-class MovieDetailActivity : AppCompatActivity() {
+class MovieDetailActivity : BaseActivity() {
 
     @Inject
     lateinit var movieDetailRepository: MovieDetailRepository
@@ -27,6 +27,12 @@ class MovieDetailActivity : AppCompatActivity() {
         activityMovieDetailBinding = ActivityMovieDetailBinding.inflate(layoutInflater)
         setContentView(activityMovieDetailBinding.root)
         setSupportActionBar(activityMovieDetailBinding.toolbar)
+
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true);
+        supportActionBar!!.setDisplayShowHomeEnabled(true);
+
+        initProgressBar(activityMovieDetailBinding.pbLoading)
+
 
         activityMovieDetailBinding.toolbar.title = "Movie Detail"
         val imdiId = intent.getStringExtra("detail")
@@ -49,11 +55,24 @@ class MovieDetailActivity : AppCompatActivity() {
         })
 
         movieDetailViewModel.observeProgress().observe(this, {
+            if (it) {
+                showProgressBar()
+            } else {
+                hideProgressBar()
+            }
         })
 
         movieDetailViewModel.observeErrorMessage().observe(this, {
             Toast.makeText(this, it, Toast.LENGTH_LONG).show()
         })
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // handle arrow click here
+        if (item.getItemId() === R.id.home) {
+            finish() // close this activity and return to preview activity (if there is any)
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 }

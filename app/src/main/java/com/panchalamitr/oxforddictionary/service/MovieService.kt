@@ -8,6 +8,7 @@ import retrofit2.http.Query
 
 interface MovieService {
 
+
     @GET(".")
     suspend fun getMovie(
         @Query("i") imdbId: String,

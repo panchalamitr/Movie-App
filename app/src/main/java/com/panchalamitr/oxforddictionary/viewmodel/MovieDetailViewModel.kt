@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.panchalamitr.oxforddictionary.model.MovieDetail
 import com.panchalamitr.oxforddictionary.repository.MovieDetailRepository
+import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 
 class MovieDetailViewModel @ViewModelInject constructor(
@@ -21,14 +22,16 @@ class MovieDetailViewModel @ViewModelInject constructor(
 
 
     fun getMovieDetail(imDbId: String) {
-        viewModelScope.launch {
+        viewModelScope.launch(IO) {
             showProgressLiveData.postValue(true)
             val movieResponse = movieDetailRepository.getMovieDetail(imDbId)
+
             if(movieResponse.response == "False"){
-                errorMessageLiveData.postValue(movieResponse.error)
+                errorMessageLiveData.postValue(movieResponse.error!!)
             }else {
                 movieDetailLiveData.postValue(movieResponse)
             }
+
             showProgressLiveData.postValue(false)
         }
     }
