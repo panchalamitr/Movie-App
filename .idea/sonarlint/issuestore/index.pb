@@ -47,3 +47,5 @@ Yapp/src/androidTest/java/com/panchalamitr/oxforddictionary/MovieDetailInstrumen
 Mapp/src/androidTest/java/com/panchalamitr/oxforddictionary/db/MovieDaoTest.kt,b\c\bc2f8b7a0dec1c663650cf02b28acfc5edbf704b
 ‰
 Yapp/src/test/java/com/panchalamitr/oxforddictionary/repository/FakeMovieListRepository.kt,9\e\9ee571a3d44f7665693cb4234aa25587d2f917ea
+‹
+[app/src/test/java/com/panchalamitr/oxforddictionary/repository/FakeMovieDetailRepository.kt,e\9\e9c6614ee5371a5cfa1a12066ece8b14f73fc259
