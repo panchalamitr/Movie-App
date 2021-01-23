@@ -24,5 +24,8 @@ created using below tools:
 
 ![](https://github.com/panchalamitr/Movie-App/blob/main/screenshot/Banner.jpg)
 
+--------------
+## Application Flow Chart
+
 ![](https://github.com/panchalamitr/Movie-App/blob/main/screenshot/MVVMPattern.png)
 
