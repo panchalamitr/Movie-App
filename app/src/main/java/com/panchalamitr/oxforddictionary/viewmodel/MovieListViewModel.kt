@@ -21,7 +21,6 @@ class MovieListViewModel @ViewModelInject constructor(
     private val showProgressLiveData = MutableLiveData<Boolean>()
     private val errorMessageLiveData = MutableLiveData<String>()
 
-
     fun getMovie() {
         viewModelScope.launch(IO) {
 

@@ -1,11 +1,11 @@
 package com.panchalamitr.oxforddictionary.ui
 
-import android.R
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.viewModels
 import com.bumptech.glide.Glide
+import com.panchalamitr.oxforddictionary.R
 import com.panchalamitr.oxforddictionary.databinding.ActivityMovieDetailBinding
 import com.panchalamitr.oxforddictionary.repository.MovieDetailRepository
 import com.panchalamitr.oxforddictionary.viewmodel.MovieDetailViewModel

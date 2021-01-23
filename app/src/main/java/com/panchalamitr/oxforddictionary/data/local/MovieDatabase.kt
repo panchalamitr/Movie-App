@@ -1,4 +1,4 @@
-package com.panchalamitr.oxforddictionary.db
+package com.panchalamitr.oxforddictionary.data.local
 
 import android.content.Context
 import androidx.room.Database

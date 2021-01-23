@@ -5,7 +5,7 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.ihsanbal.logging.Level
 import com.ihsanbal.logging.LoggingInterceptor
-import com.panchalamitr.oxforddictionary.service.MovieService
+import com.panchalamitr.oxforddictionary.data.remote.MovieService
 import com.panchalamitr.oxforddictionary.util.Constant
 import dagger.Module
 import dagger.Provides

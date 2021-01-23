@@ -1,4 +1,4 @@
-package com.panchalamitr.oxforddictionary.service
+package com.panchalamitr.oxforddictionary.data.remote
 
 import com.panchalamitr.oxforddictionary.model.Movie
 import com.panchalamitr.oxforddictionary.model.MovieDetail

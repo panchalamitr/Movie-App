@@ -1,10 +1,12 @@
-package com.panchalamitr.oxforddictionary.db
+package com.panchalamitr.oxforddictionary.data.db
 
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SmallTest
 import com.google.common.truth.Truth
+import com.panchalamitr.oxforddictionary.data.local.MovieDao
+import com.panchalamitr.oxforddictionary.data.local.MovieDatabase
 import com.panchalamitr.oxforddictionary.model.MovieDetail
 import com.panchalamitr.oxforddictionary.model.Search
 import kotlinx.coroutines.test.runBlockingTest
@@ -20,7 +22,10 @@ class MovieDaoTest {
     private lateinit var database: MovieDatabase
     private lateinit var dao: MovieDao
 
-    /** It will call before every test cases executed **/
+    /** It will call before every test cases executed
+     * We will use inMemoryDatabaseBuilder so it will be executed temporary and
+     * it will not affect to original record
+     **/
     @Before
     fun setUp() {
         database = Room.inMemoryDatabaseBuilder(

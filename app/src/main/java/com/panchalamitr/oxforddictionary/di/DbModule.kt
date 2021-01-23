@@ -1,9 +1,8 @@
 package com.panchalamitr.oxforddictionary.di
 
 import android.content.Context
-import androidx.room.Room
-import com.panchalamitr.oxforddictionary.db.MovieDao
-import com.panchalamitr.oxforddictionary.db.MovieDatabase
+import com.panchalamitr.oxforddictionary.data.local.MovieDao
+import com.panchalamitr.oxforddictionary.data.local.MovieDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
