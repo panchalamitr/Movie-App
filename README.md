@@ -1,7 +1,8 @@
 # Movie-App-Android-MVVM-with-Coroutine
 
-Movie app is an open source application, created using below tools: 
+Movie app is an open source application, this app will fetch data first from webservice, then those data will be stored on local database. Next time it will check if data is already stored then retrive those data from the database instead of creating web request.
 
+created using below tools: 
 - MVVM pattern 
 - Live Data 
 - Coroutine
